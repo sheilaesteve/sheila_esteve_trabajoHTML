@@ -1,0 +1,416 @@
+/*Definimos el estilo general de la página*/
+body{
+     /*Color de fondo*/
+    background-color: #fbcfff;
+     /*Añadimos márgenes*/
+    margin-left: 20px;
+    margin-right: 20px;
+    /*Fuente principal*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logotipo{
+    flex: 5%;
+    display: flex;
+     /*Alineamos el logotipo*/
+    align-items: center;
+    justify-content: left;
+      /*Fuente para el logotipo*/
+    font-family: 'Playwrite CU', cursive;
+    font-weight: bold ;
+    font-style: normal;
+    /*Ajustamos tamaño de la fuente*/
+    font-size: 36px;
+    }
+
+
+.barra_navegacion{
+    flex: 95%;
+    /*Alineamos la barra de navegación*/
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    font-size: 20px;
+}
+
+.barra_navegacion a{
+    text-decoration: none;
+    color: #000;
+}
+
+.barra_navegacion a:hover{
+    color:#ff30f5
+}
+
+.barra_navegacion .index_activo a, .contacto_activo a, .productos_activo a, .presupuesto_activo a{
+    color: #dd30ff;
+    font-weight: bold;
+}
+
+.index,.index_activo{
+    flex: 25%;
+    /*Alineamos el contenido*/
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+
+.productos, .productos_activo{
+    flex: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+
+.presupuesto, .presupuesto_activo{
+    flex: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+
+.contacto, .contacto_activo{
+    flex: 25%;
+    display: flex;
+    justify-content: right;
+}
+
+
+.footer{
+    background-color: #333; 
+    color: #fff;
+    text-align: center; 
+    padding: 20px 10px; 
+    font-size: 0.9rem;
+}
+
+.footer_social{
+    margin-bottom: 15px;
+}
+
+.social_icon{
+    width: 30px; 
+    height: 30px;
+    margin: 0 10px; 
+    vertical-align: middle; 
+}
+
+.footer_address{
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.footer_legal{
+    color: #ffb6c1;
+    text-decoration: none; 
+}
+
+.footer_legal a:hover{
+    text-decoration: underline;
+}
+
+.contenedor_cuadricula{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.imagenes_productos{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+
+.imagenes_productos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.imagenes_productos:hover .capa_superpuesta{
+    opacity: 1;
+}
+
+.capa_superpuesta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.capa_superpuesta p{
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.capa_superpuesta .btn{
+    background-color: #ff30f5;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.capa_superpuesta .btn:hover{
+    background-color: #dd30ff;
+}
+
+.inicio_texto{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.inicio{
+    position:static;
+    text-align: center;
+    color: #fff;
+}
+
+.inicio_contacto{
+    position:static;
+    text-align: center;
+    color: #000000;
+}
+
+.conocenos{
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.imagen1, .imagen2 {
+    width: 100%;
+}
+
+
+.boton1{
+    background-color: #ff30f5;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.historia{
+    display: flex;
+    align-items: flex-start;
+   gap: 20px;
+}
+
+.imagen_persona{
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.texto_historia h2{
+    color: #333;
+    font-size: 2rem;
+    line-height: 1.8;
+}
+
+.mejores_manos{
+    text-align: center;
+}
+
+.tarjeta_regalo{
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.boton2{
+    background-color: #ff30f5;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.belleza{
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.titulo_seccion{
+    text-align: center;
+}
+
+.mapa{
+    flex: 1;
+    padding-right: 20px;
+}
+
+.containter{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 120px;
+}
+
+.texto_con_linea{
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.texto_linea_blanca{
+    border-bottom: 4px solid #ffffff;
+    padding-bottom: 5px;
+}
+
+.formulario_contacto{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja_contacto{
+    width: 60%;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.boton_enviar{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 auto;
+    width: auto;
+}
+
+input, textarea, label {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+}
+
+.logotipo_piepag{
+    flex: 5%;
+    display: flex;
+    align-items:normal;
+    justify-content: left;
+    font-family: 'Playwrite CU', cursive;
+    font-weight: bold ;
+    font-style: normal;
+    font-size: 36px;
+    color: #fff;
+    }
+
+    /* Estilo general para la sección */
+.productos_destacados {
+    text-align: center;
+    margin: 40px 20px;
+}
+
+.productos_destacados h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Contenedor para las imágenes */
+.contenedor_imagenes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.imagen_producto {
+    position: relative;
+    width: 250px; /* Tamaño ajustado para que entren horizontalmente */
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.imagen_producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Estilo para la capa superpuesta */
+.imagen_producto .capa_superpuesta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.imagen_producto:hover .capa_superpuesta {
+    opacity: 1;
+}
+
+/* Botón dentro de la capa superpuesta */
+.capa_superpuesta .btn {
+    background-color: #ff30f5;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.capa_superpuesta .btn:hover {
+    background-color: #dd30ff;
+}

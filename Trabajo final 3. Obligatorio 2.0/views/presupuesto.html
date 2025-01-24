@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Nails Rossi</title>
+        <!--Añadimos enlace a .css-->
+        <link rel="stylesheet" href="../css/estilos.css">
+        <!--Aádimos la fuente escogida para el logotipo-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+    </head>
+    <header>
+        <nav class="menu">
+            <ul class="barra_navegacion">
+                <li class="logotipo">NailsRossi</li>
+                <li class="index"><a href="../index.html">Inicio</a></li>
+                <li class="contacto"><a href="./contacto.html">Contacto</a></li>
+                <li class="presupuesto_activo"><a href="./presupuesto.html">Presupuestos</a></li>
+                <li class="productos"><a href="./productos.html">Productos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <body>
+        <h2 class="formulario_contacto">Formulario de Contacto</h2>
+        <form action="#" method="POST" onsubmit="return validarFormulario()" class="formulario_contacto">
+            
+            <input class="caja_contacto" type="text" id="nombre" name="nombre" placeholder="Nombre" pattern="[A-Za-z]+" title="Solo está permitido usar letras y espacios" required>
+
+            <input class="caja_contacto" type="email" id="email" name="email" placeholder="E-mail" required>
+
+            <input class="caja_contacto" type="tel" id="telefono" name="telefono" placeholder="Teléfono" pattern="(\+?\d{1,4}[\s.-]?)?(\(?\d{1,4}\)?[\s.-]?\d{1,4}[\s.-]?\d{1,4}[\s.-]?\d{1,9})" 
+            title="Formato de teléfono inválido. Ejemplo: +34 123 456 789 o 123-456-789" required>
+
+            <textarea class="caja_contacto" id="mensaje" name="mensaje" rows="4" placeholder="Mensaje" required></textarea>
+            
+            <label>
+                <input type="checkbox" id="politica" name="politica" required>
+                Acepto la <a href="#">Política de privacidad</a>
+            </label>
+
+            <input type="submit" value="Enviar" class="boton_enviar">
+
+            <script>
+                function validarFormulario() {
+                    var politica = document.getElementById('politica');
+                    if (!politica.checked) {
+                        alert('Debes aceptar la Política de privacidad para enviar el formulario.');
+                        return false; 
+                    }
+                    return true;
+                }
+            </script>
+
+        </form>
+
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="footer_social">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                    <img src="../images/facebook_icon.svg" alt="Facebook" class="social_icon"></a>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                        <img src="../images/instagram_icon.svg" alt="Instagram" class="social_icon">
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+                        <img src="../images/twitter_icon.svg" alt="Twitter" class="social_icon">
+                    </a>
+            </div>
+            <div class="footer_address">
+                Rue des Arènes 30127, Bellegarde, France
+            </div>
+            <div class="footer_legal">
+                <a href="views/aviso-legal.html" class="legal-link">Aviso legal</a>
+            </div>
+            <div class="logotipo_piepag">
+                NailsRossi
+            </div>
+        </div>
+            
+        <p class="footer_copyright">© 2024 NailsRossi. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
